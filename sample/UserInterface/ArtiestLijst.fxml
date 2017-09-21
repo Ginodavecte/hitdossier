@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Controller_ArtiestLijst">
+   <children>
+      <HBox>
+         <children>
+            <TextField fx:id="zoekArtiest" onAction="#knop" />
+
+            <Button id="knop" fx:id="laad" mnemonicParsing="false" onAction="#knop" text="Laad alle artiesten" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="infolabel" text="" />
+      <ListView fx:id="lijst" onMouseClicked="#tabelklik" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

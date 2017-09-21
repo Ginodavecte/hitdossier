@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Controller_SingleLijst">
+   <children>
+      <HBox>
+         <children>
+            <TextField fx:id="zoekSingle" onAction="#knop" />
+
+            <Button id="knop" fx:id="laad" mnemonicParsing="false" onAction="#knop" text="Laad alle singles" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="infolabel" text="" />
+      <TableView fx:id="lijst" VBox.vgrow="ALWAYS" onMouseClicked="#tabelklik">
+         <columns>
+            <TableColumn fx:id="c1" minWidth="250.0" prefWidth="250.0" resizable="false" text="Single" />
+            <TableColumn fx:id="c2" minWidth="250.0" prefWidth="250.0" resizable="false" text="Artiest" />
+         </columns>
+      </TableView>
+   </children>
+</VBox>
